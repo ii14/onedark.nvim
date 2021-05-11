@@ -525,11 +525,15 @@ vim.g.terminal_color_foreground = vim.g.terminal_color_7
 -- Neovim LSP colors
 h('LspDiagnosticsDefaultError',         { fg = red })
 h('LspDiagnosticsDefaultWarning',       { fg = yellow })
-h('LspDiagnosticsDefaultInformation',   { fg = white })
-h('LspDiagnosticsDefaultHint',          { fg = comment_grey })
+h('LspDiagnosticsDefaultInformation',   { fg = blue })
+h('LspDiagnosticsDefaultHint',          { fg = white })
 h('LspDiagnosticsUnderlineError',       { fg = red, gui = 'underline', cterm = 'underline' })
 h('LspDiagnosticsUnderlineWarning',     { fg = yellow, gui = 'underline', cterm = 'underline' })
-h('LspDiagnosticsUnderlineInformation', { fg = white, gui = 'underline', cterm = 'underline' })
-h('LspDiagnosticsUnderlineHint',        { fg = comment_grey, gui = 'underline', cterm = 'underline' })
+h('LspDiagnosticsUnderlineInformation', { fg = blue, gui = 'underline', cterm = 'underline' })
+h('LspDiagnosticsUnderlineHint',        { fg = white, gui = 'underline', cterm = 'underline' })
+h('LspDiagnosticsSignError',            { fg = red })
+h('LspDiagnosticsSignWarning',          { fg = yellow })
+h('LspDiagnosticsSignInformation',      { fg = blue })
+h('LspDiagnosticsSignHint',             { fg = white })
 
 vim.o.background = 'dark'
