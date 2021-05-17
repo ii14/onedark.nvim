@@ -39,7 +39,7 @@ vim.g.terminal_ansi_colors = {
 }
 
 local function h(group, style)
-  if terminal_italics then
+  if not terminal_italics then
     if style.cterm == 'italic' then
       style.cterm = nil
     end
