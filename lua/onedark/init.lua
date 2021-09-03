@@ -444,9 +444,9 @@ h('xmlTag',     { fg = red })
 h('xmlTagName', { fg = red })
 
 -- airblade/vim-gitgutter
-vim.cmd('hi link GitGutterAdd    SignifySignAdd')
-vim.cmd('hi link GitGutterChange SignifySignChange')
-vim.cmd('hi link GitGutterDelete SignifySignDelete')
+h("GitGutterAdd",    { fg = green })
+h("GitGutterChange", { fg = yellow })
+h("GitGutterDelete", { fg = red })
 
 -- dense-analysis/ale
 h('ALEError',   { fg = red, gui = 'underline', cterm = 'underline' })
@@ -459,10 +459,15 @@ h('EasyMotionTarget2First',  { fg = yellow, gui = 'bold', cterm = 'bold' })
 h('EasyMotionTarget2Second', { fg = dark_yellow, gui = 'bold', cterm = 'bold' })
 h('EasyMotionShade',         { fg = comment_grey })
 
+-- lewis6991/gitsigns.nvim
+vim.cmd('hi link GitSignsAdd    GitGutterAdd')
+vim.cmd('hi link GitSignsChange GitGutterChange')
+vim.cmd('hi link GitSignsDelete GitGutterDelete')
+
 -- mhinz/vim-signify
-h('SignifySignAdd',    { fg = green })
-h('SignifySignChange', { fg = yellow })
-h('SignifySignDelete', { fg = red })
+vim.cmd('hi link SignifySignAdd    GitGutterAdd')
+vim.cmd('hi link SignifySignChange GitGutterChange')
+vim.cmd('hi link SignifySignDelete GitGutterDelete')
 
 -- neomake/neomake
 h('NeomakeWarningSign', { fg = yellow })
@@ -474,6 +479,12 @@ h('mkdDelimiter', { fg = purple })
 h('mkdHeading',   { fg = red })
 h('mkdLink',      { fg = blue })
 h('mkdURL',       { fg = cyan, gui = 'underline', cterm = 'underline' })
+
+-- prabirshrestha/vim-lsp
+h("LspError",       { fg = red })
+h("LspWarning",     { fg = yellow })
+h("LspInformation", { fg = blue })
+h("LspHint",        { fg = cyan })
 
 -- tpope/vim-fugitive
 h('diffAdded',   { fg = green })
@@ -526,14 +537,18 @@ vim.g.terminal_color_foreground = vim.g.terminal_color_7
 h('LspDiagnosticsDefaultError',         { fg = red })
 h('LspDiagnosticsDefaultWarning',       { fg = yellow })
 h('LspDiagnosticsDefaultInformation',   { fg = blue })
-h('LspDiagnosticsDefaultHint',          { fg = white })
+h('LspDiagnosticsDefaultHint',          { fg = cyan })
 h('LspDiagnosticsUnderlineError',       { fg = red, gui = 'underline', cterm = 'underline' })
 h('LspDiagnosticsUnderlineWarning',     { fg = yellow, gui = 'underline', cterm = 'underline' })
 h('LspDiagnosticsUnderlineInformation', { fg = blue, gui = 'underline', cterm = 'underline' })
-h('LspDiagnosticsUnderlineHint',        { fg = white, gui = 'underline', cterm = 'underline' })
+h('LspDiagnosticsUnderlineHint',        { fg = cyan, gui = 'underline', cterm = 'underline' })
 h('LspDiagnosticsSignError',            { fg = red })
 h('LspDiagnosticsSignWarning',          { fg = yellow })
 h('LspDiagnosticsSignInformation',      { fg = blue })
-h('LspDiagnosticsSignHint',             { fg = white })
+h('LspDiagnosticsSignHint',             { fg = cyan })
+h("LspDiagnosticsVirtualTextError",     { fg = red, bg = cursor_grey })
+h("LspDiagnosticsVirtualTextWarning",   { fg = yellow, bg = cursor_grey })
+h("LspDiagnosticsVirtualTextInformation", { fg = blue, bg = cursor_grey })
+h("LspDiagnosticsVirtualTextHint",      { fg = cyan, bg = cursor_grey })
 
 vim.o.background = 'dark'
