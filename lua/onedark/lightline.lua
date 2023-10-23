@@ -6,39 +6,39 @@ local yellow = { colors.yellow.gui, colors.yellow.cterm }
 local blue = { colors.blue.gui, colors.blue.cterm }
 local purple = { colors.purple.gui, colors.purple.cterm }
 local white = { colors.white.gui, colors.white.cterm }
-local black = { colors.black.gui, colors.black.cterm }
-local grey = { colors.visual_grey.gui, colors.cursor_grey.cterm }
+local cursor_grey = { colors.cursor_grey.gui, colors.cursor_grey.cterm }
+local visual_grey = { colors.visual_grey.gui, colors.visual_grey.cterm }
 
 local p = {
   normal = {
-    left = { { black, green }, { white, grey } },
-    right = { { black, green }, { white, grey } },
-    middle = { { white, black } },
-    error = { { black, red } },
-    warning = { { black, yellow } },
+    left = { { cursor_grey, green }, { white, visual_grey } },
+    right = { { cursor_grey, green }, { white, visual_grey } },
+    middle = { { white, cursor_grey } },
+    error = { { cursor_grey, red } },
+    warning = { { cursor_grey, yellow } },
   },
   inactive = {
-    left = { { white, grey }, { white, grey } },
-    right = { { black, white }, { black, white } },
-    middle = { { white, grey } },
+    left =  { { white, visual_grey }, { white, visual_grey } },
+    right = { { cursor_grey, white }, { cursor_grey, white } },
+    middle = { { white, visual_grey } },
   },
   insert = {
-    left = { { black, blue }, { white, grey } },
-    right = { { black, blue }, { white, grey } },
+    left = { { cursor_grey, blue }, { white, visual_grey } },
+    right = { { cursor_grey, blue }, { white, visual_grey } },
   },
   replace = {
-    left = { { black, red }, { white, grey } },
-    right = { { black, red }, { white, grey } },
+    left = { { cursor_grey, red }, { white, visual_grey } },
+    right = { { cursor_grey, red }, { white, visual_grey } },
   },
   visual = {
-    left = { { black, purple }, { white, grey } },
-    right = { { black, purple }, { white, grey } },
+    left = { { cursor_grey, purple }, { white, visual_grey } },
+    right = { { cursor_grey, purple }, { white, visual_grey } },
   },
   tabline = {
-    left = { { white, grey } },
-    tabsel = { { black, white } },
-    middle = { { white, black } },
-    right = { { white, grey } },
+    left = { { white, visual_grey } },
+    tabsel = { { cursor_grey, white } },
+    middle = { { white, cursor_grey } },
+    right = { { white, visual_grey } },
   },
 }
 
